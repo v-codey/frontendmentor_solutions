@@ -15,6 +15,10 @@
     --ff-body: var(--ff-primary);
     --ff-heading: var(--ff-primary);
 
+    --fs-small: 14px;
+    --fs-mid: 16px;
+    --fs-heading: 56px;
+
     --fw-regular: 400;
     --fw-semi-bold: 500;
     --fw-bold: 700;
@@ -33,10 +37,8 @@ body{
 
 }
 
-
-
 .wide80{
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -59,7 +61,7 @@ body{
     justify-content: space-around;
     align-items: center;
     height: 140px;
-    font-size: 14px;
+    font-size: var(--fs-small);
     font-weight: 500;
 }
 
@@ -70,28 +72,58 @@ body{
 }
 
 .navLinks{
-    width: 70px;
+    padding: 5px;
+}
+
+.navLinks:hover, .getStarted:hover{
+    opacity: 0.5;
+    cursor: pointer;
 }
 
 .getStarted {
     background-color: var(--clr-accent-400);
     border: none;
     width: 140px;
-    height: 40px;
+    height: 45px;
     border-radius: 50px;
     color: var(--clr-accent-100);
     font-weight: 700;
-    box-shadow: 3px 5px 8px 6px var(--clr-accent-100);
+    box-shadow: 10px 6px 8px 4px var(--clr-accent-100);
 }
 
+
 /* first page */
+
+.firstPage{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .dataIllustration{
-    width: 100%;
+    /* flex-basis: 40%; */
+    width: 570px;
     height: 500px;
     background: url(../images/illustration-intro.svg);
     background-repeat: no-repeat;
 }
 
+.introText{
+    height: 400px;
+    flex-basis: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px 30px;
+}
+
+.introText > h1{
+    font-size: var(--fs-heading);
+    flex-basis: 40%;
+}
 
 
 
